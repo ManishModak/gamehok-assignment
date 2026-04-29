@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { games } from "@/lib/mockData";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GamesGrid() {
   return (
@@ -25,6 +26,7 @@ export default function GamesGrid() {
                   src={game.image}
                   alt={game.name}
                   fill
+                  sizes="(max-width: 768px) 33vw, (max-width: 1200px) 25vw, 256px"
                   className="object-cover group-hover/card:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -35,13 +37,13 @@ export default function GamesGrid() {
           ))}
         </div>
         
-        {/* Decorative Arrows matching Figma - Desktop Only */}
+        {/* Decorative Arrows matching Figma/Screenshot - Desktop Only */}
         <div className="hidden md:block">
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10">
-            <span className="text-xl">‹</span>
+          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
+            <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10">
-            <span className="text-xl">›</span>
+          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
+            <ChevronRight className="w-6 h-6" />
           </button>
         </div>
       </div>

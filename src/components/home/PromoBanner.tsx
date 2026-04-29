@@ -9,6 +9,7 @@ export default function PromoBanner() {
           src="/images/bouncy-bird.png"
           alt="Bouncy Bird"
           fill
+          sizes="100vw"
           className="object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent p-4 md:p-10 flex flex-col justify-center">

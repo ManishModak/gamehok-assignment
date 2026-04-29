@@ -30,6 +30,7 @@ export default function FeaturedCarousel() {
                     src={tournament.image}
                     alt={tournament.title}
                     fill
+                    sizes="(max-width: 768px) 85vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover"
                   />
                   {/* Overlay tags */}

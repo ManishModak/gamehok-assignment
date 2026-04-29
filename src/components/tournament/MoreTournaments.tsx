@@ -39,7 +39,7 @@ export default function MoreTournaments() {
         {otherTournaments.map((t, i) => (
           <div key={i} className="flex-shrink-0 w-[280px] md:w-[320px] bg-card border border-border rounded-2xl overflow-hidden group cursor-pointer">
             <div className="relative h-40">
-              <Image src={t.image} fill alt={t.title} className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src={t.image} fill sizes="(max-width: 768px) 280px, 320px" alt={t.title} className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute top-3 left-3 flex gap-2">
                 <span className="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded border border-white/10 uppercase">
                   Registration Open

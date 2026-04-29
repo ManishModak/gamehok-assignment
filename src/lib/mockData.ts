@@ -21,7 +21,7 @@ export const featuredTournaments = [
     status: "Registration Open",
     filled: 120,
     totalSpots: 200,
-    image: "/images/ff-banner.png",
+    image: "/images/bgmi-banner.png",
   }
 ];
 

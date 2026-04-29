@@ -13,6 +13,7 @@ export default function TournamentLayout({ children }: { children: React.ReactNo
             alt="Tournament Banner"
             fill
             priority
+            sizes="100vw"
             className="object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex flex-col justify-end p-5 md:p-10">
@@ -24,7 +25,7 @@ export default function TournamentLayout({ children }: { children: React.ReactNo
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-secondary overflow-hidden border border-border relative">
                 {/* Organiser Avatar Placeholder */}
-                <Image src="https://api.dicebear.com/7.x/avataaars/svg?seed=Gamehok" alt="Organiser" fill className="object-cover" />
+                <Image src="https://api.dicebear.com/7.x/avataaars/svg?seed=Gamehok" alt="Organiser" fill sizes="32px" unoptimized className="object-cover" />
               </div>
               <p className="text-sm font-bold text-muted-foreground">BY GS ESPORTS</p>
             </div>

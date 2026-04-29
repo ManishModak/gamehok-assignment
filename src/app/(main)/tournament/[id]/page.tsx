@@ -123,7 +123,7 @@ function OrganiserDetails() {
       <div className="bg-card border border-border p-6 rounded-2xl flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
-            <Image src="https://api.dicebear.com/7.x/avataaars/svg?seed=Gamehok" fill alt="Avatar" className="object-cover" />
+            <Image src="https://api.dicebear.com/7.x/avataaars/svg?seed=Gamehok" fill sizes="56px" unoptimized alt="Avatar" className="object-cover" />
           </div>
           <div>
             <p className="text-lg font-bold text-foreground">GS ESPORTS</p>
