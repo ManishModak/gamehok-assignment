@@ -1,0 +1,6 @@
+homepage mobile - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=4-28&t=HfVGzmgkf3FnH5IC-4
+homepage desktop - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=4-616&t=HfVGzmgkf3FnH5IC-4
+Tournament details mobile - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=7-3399&t=HfVGzmgkf3FnH5IC-4
+Tournament details desktop - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=7-3755&t=HfVGzmgkf3FnH5IC-4
+lobbies mobile - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=7-4213&t=HfVGzmgkf3FnH5IC-4
+lobbies desktop - https://www.figma.com/design/q9fU3PPVoLqjHyyKEOKB8s/Frontend-Assignment?node-id=7-4992&t=HfVGzmgkf3FnH5IC-4
