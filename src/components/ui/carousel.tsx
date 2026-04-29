@@ -95,7 +95,9 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return
-    onSelect(api)
+    
+    // Set initial state after initialization
+    api.on("init", () => onSelect(api))
     api.on("reInit", onSelect)
     api.on("select", onSelect)
 
