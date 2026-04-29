@@ -15,7 +15,7 @@ export default function GamesGrid() {
       
       <div className="relative group">
         {/* Mobile Grid / Desktop Scroll */}
-        <div className="grid grid-cols-3 gap-3 md:flex md:gap-8 md:overflow-x-auto md:pb-4 scrollbar-hide snap-x scroll-smooth">
+        <div className="grid grid-cols-3 gap-3 md:flex md:gap-8 md:overflow-x-auto md:pb-4 md:px-2 md:-mx-2 scrollbar-hide snap-x scroll-smooth">
           {games.map((game) => (
             <div 
               key={game.id} 
@@ -39,10 +39,10 @@ export default function GamesGrid() {
         
         {/* Decorative Arrows matching Figma/Screenshot - Desktop Only */}
         <div className="hidden md:block">
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
+          <button className="absolute -left-5 top-[6rem] -translate-y-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
+          <button className="absolute -right-5 top-[6rem] -translate-y-1/2 w-10 h-10 rounded-full bg-[#24FD70] flex items-center justify-center text-black shadow-[0_0_20px_rgba(36,253,112,0.4)] z-10 hover:scale-110 transition-transform">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>

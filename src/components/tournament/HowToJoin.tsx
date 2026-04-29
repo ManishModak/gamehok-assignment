@@ -11,10 +11,9 @@ export default function HowToJoin() {
   return (
     <div className="flex flex-col gap-4">
       <h3 className="text-xl font-bold text-foreground">How to Join a Match</h3>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-3 list-disc pl-5">
         {steps.map((step, i) => (
-          <li key={i} className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
-            <span className="text-primary mt-1.5">•</span>
+          <li key={i} className="text-sm text-muted-foreground leading-relaxed marker:text-primary">
             {step}
           </li>
         ))}
