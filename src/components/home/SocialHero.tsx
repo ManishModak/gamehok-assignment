@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { userStats } from "@/lib/mockData";
 import { PlusCircle, MessageSquare, ThumbsUp, Star } from "lucide-react";
 
 export default function SocialHero() {
