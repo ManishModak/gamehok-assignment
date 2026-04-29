@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Home, Trophy, Users, MessageSquare, LogOut, Gamepad2 } from "lucide-react";
+import { Home, Trophy, Users, MessageSquare, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -14,11 +15,8 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-[260px] h-screen fixed left-0 top-0 bg-background border-r border-border p-6 z-40 overflow-y-auto">
       {/* Logo Area */}
-      <div className="flex items-center gap-3 mb-12 mt-2 px-2">
-        <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-          <Gamepad2 className="w-5 h-5 text-primary-foreground" />
-        </div>
-        <span className="text-2xl font-black tracking-tight text-primary">GAMEHOK</span>
+      <div className="flex items-center mb-12 mt-2 px-2">
+        <Image src="/svgs/gamehok-logo.svg" alt="Gamehok Logo" width={139} height={36} className="w-auto h-8" priority />
       </div>
 
       {/* Navigation Links */}

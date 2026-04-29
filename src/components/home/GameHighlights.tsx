@@ -1,56 +1,77 @@
 import React from "react";
 import Image from "next/image";
-import { PlayCircle } from "lucide-react";
 
 const highlights = [
   {
     id: 1,
     title: "Call of Duty",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/call-of-duty-highlights section.png",
   },
   {
     id: 2,
     title: "BGMI Tournaments",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop",
+    image: "/images/bgmi-tournament.png",
   },
   {
     id: 3,
     title: "Call of Duty",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/call-of-duty-highlights section.png",
   },
   {
     id: 4,
     title: "BGMI Tournaments",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop",
+    image: "/images/bgmi-tournament.png",
   },
 ];
 
 export default function GameHighlights() {
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
-      <div className="flex items-center justify-between">
-        <h3 className="text-sm md:text-base font-bold text-foreground uppercase tracking-widest">
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center justify-between mb-1 md:mb-2">
+        <h3 className="text-[16px] md:text-xl font-bold text-white">
           Game Highlights
         </h3>
-        <button className="text-xs font-bold text-primary hover:underline">View All</button>
+        <button className="text-[12px] md:text-sm text-[#00E576] font-semibold hover:underline">
+          View All
+        </button>
       </div>
 
-      <div className="flex flex-col gap-4">
+      {/* Mobile: Horizontal Layout */}
+      <div className="flex lg:hidden overflow-x-auto gap-3 snap-x scroll-smooth pb-2 -mx-4 px-4 scrollbar-hide">
         {highlights.map((item) => (
-          <div key={item.id} className="flex flex-col gap-2 group cursor-pointer">
-            <div className="relative aspect-video rounded-xl overflow-hidden border border-border">
+          <div key={`mobile-${item.id}`} className="flex flex-col gap-2.5 group cursor-pointer w-[75%] md:w-[45%] flex-shrink-0 snap-start">
+            <div className="relative aspect-video rounded-[16px] overflow-hidden bg-muted border border-white/5 shadow-sm">
               <Image
                 src={item.image}
                 alt={item.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 85vw, 400px"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <PlayCircle className="w-10 h-10 text-white fill-white/20" />
-              </div>
             </div>
-            <p className="text-xs font-bold text-muted-foreground">{item.title}</p>
+            <p className="text-[14px] font-bold text-white pl-1">
+              {item.title}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: Vertical Layout */}
+      <div className="hidden lg:flex flex-col gap-6">
+        {highlights.map((item) => (
+          <div key={`desktop-${item.id}`} className="flex flex-col gap-3 group cursor-pointer w-full">
+            <div className="relative aspect-video rounded-[16px] overflow-hidden bg-muted border border-white/5 shadow-sm">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(min-width: 1024px) 33vw, 400px"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <p className="text-[16px] font-bold text-white pl-1">
+              {item.title}
+            </p>
           </div>
         ))}
       </div>

@@ -1,7 +1,17 @@
+"use client";
+
 import React from "react";
 import { Home, Trophy, Users, MessageSquare } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function BottomNav() {
+  const pathname = usePathname();
+
+  // Hide bottom navigation on tournament details screen
+  if (pathname?.startsWith("/tournament/")) {
+    return null;
+  }
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-border md:hidden">
       <div className="flex items-center justify-between px-6 py-3">

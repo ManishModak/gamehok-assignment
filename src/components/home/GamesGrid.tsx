@@ -7,10 +7,10 @@ export default function GamesGrid() {
   return (
     <div className="w-full">
       <div className="flex items-center justify-between mb-4 md:mb-6">
-        <h3 className="text-sm md:text-xl font-bold text-muted-foreground uppercase tracking-wider">
-          Play Tournament by Games
+        <h3 className="text-lg md:text-xl font-bold text-foreground">
+          Play Tournaments by Games
         </h3>
-        <button className="text-xs md:text-sm font-bold text-primary md:hidden">View All</button>
+        <button className="text-[10px] md:text-xs text-primary font-bold uppercase tracking-wider hover:underline md:hidden">VIEW ALL</button>
       </div>
       
       <div className="relative group">
@@ -19,9 +19,9 @@ export default function GamesGrid() {
           {games.map((game) => (
             <div 
               key={game.id} 
-              className="flex flex-col items-center gap-2 md:gap-5 md:flex-shrink-0 md:w-64 snap-start"
+              className="flex flex-col items-center gap-2 md:gap-3 md:flex-shrink-0 md:w-64 snap-start"
             >
-              <div className="relative w-full aspect-square md:aspect-[4/3] rounded-xl md:rounded-3xl overflow-hidden border border-border group/card cursor-pointer">
+              <div className="relative w-full aspect-video md:aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-border group/card cursor-pointer">
                 <Image
                   src={game.image}
                   alt={game.name}
@@ -30,7 +30,7 @@ export default function GamesGrid() {
                   className="object-cover group-hover/card:scale-110 transition-transform duration-500"
                 />
               </div>
-              <p className="text-[10px] md:text-sm font-black text-center text-foreground uppercase tracking-widest">
+              <p className="text-[10px] md:text-sm font-bold text-center text-white uppercase">
                 {game.name}
               </p>
             </div>

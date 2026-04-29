@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-3 px-4 md:px-10 border-b border-border">
-      <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-3 px-4 md:px-8 lg:px-10 border-b border-border">
+      <div className="flex items-center justify-between w-full">
         {/* Mobile Left: Menu & Avatar */}
         <div className="flex items-center gap-4 md:hidden">
           <Sheet>
